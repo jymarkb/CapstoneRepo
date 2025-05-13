@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="bootstrap\dist\css\bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap\dist\css\style.css">
+    <script src="bootstrap\dist\js\jquery-3.3.1.min.js"></script>
+    <script src="bootstrap\dist\js\bootstrap.min.js"></script>
+    <script src="bootstrap\dist\js\javascript.js"></script>
+    
+
+    <title>Capstone Library | Home</title>
+  </head>
+
+<body  onload="loadDate()">
+
+
+<nav class="navbar navbar-default custom-nav">
+  <div class="container-fluid">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navCollapse">
+            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true "></span>
+          </button>
+          <a class="navbar-brand" href="index.php"><img class="nav-brand-img" src="images\logo\logo.png"></a>
+      </div>
+  <div class="collapse navbar-collapse" id="navCollapse">
+      <ul class="nav navbar-nav">
+        <li></li>
+        <li><a href="index.php">Home</a></li>
+      </ul>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <li  class="active"><a href="onregister.php"><span class="glyphicon glyphicon-user"></span> Register Here</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+  </div>
+    
+  </div>
+</nav>
+
+
+
+<div class="container custom-main-container">
+  <div class="container-fluid">
+
+      <div class="col-md-6 col-md-offset-3 custom-container" >
+        <h1 class="content-title text-center"><span class="glyphicon glyphicon-list-alt"></span> Registration Form </h1><br>
+        <form>
+          <div class="form-group">
+            <label for="fname">First Name</label> 
+            <input type="text" class="form-control" id="fname" name="">
+          </div>
+          <div class="form-group">
+            <label for="fname">Middle Name</label>
+            <input type="text" class="form-control" id="fname" name="">
+          </div>
+          <div class="form-group">
+            <label for="fname">Last Name</label>
+            <input type="text" class="form-control" id="fname" name="">
+          </div>
+          <div class="form-group">
+            <label for="fname">Username</label>
+            <input type="text" class="form-control" id="fname" name="">
+          </div>
+          <div class="form-group">
+            <label for="fname">Password</label>
+            <input type="password" class="form-control" id="fname" name="">
+          </div>
+          <div class="form-group">
+            <label for="fname">Email</label>
+            <input type="email" class="form-control" id="fname" name="">
+          </div>
+          <div class="form-group">
+            <label for="number">Contact No.</label>
+            <input type="number" class="form-control" id="number" name="">
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label><br>
+            <input type="radio" name="gender" value="male"> Male <br>
+            <input type="radio" name="gender" value="female"> Female<br>
+          </div>
+          <div class="form-group">
+            <label for="fname">Birth Day</label><br>
+            <select name="bday">
+              <option>Jan</option>
+              <option>Feb</option>
+              <option>Mar</option>
+              <option>Apr</option>
+              <option>May</option>
+              <option>Jun</option>
+              <option>Jul</option>
+              <option>Aug</option>
+              <option>Sep</option>
+              <option>Oct</option>
+              <option>Nov</option>
+              <option>Dec</option>
+            </select>
+            <select id=day name="bday"></select>
+            <select id="year" name="bday" ></select>
+          </div>
+
+          <!-- <input type="submit" class="btn btn-success btn-lg  custom-btn" name="" value="Submit"> -->
+          
+          <div class="row">
+            <div class="col-md-12 col-xs-12 input-group text-center"> 
+              <input type="submit" class="btn btn-success btn-lg" name="" value="Submit">
+            </div>
+          </div>
+          
+
+        </form>
+      </div>
+
+  </div>
+</div>
+
+
+
+<!-- modal-login -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title text-center">Login</h2>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-user"></span></span>
+              <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+            </div>
+             <div class="input-group input-group-lg">
+              <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-lock"></span></span>
+              <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+            </div>
+
+            <div class="col-md-12 col-xs-12 input-group text-center"> 
+              <input type="submit" class="btn btn-success btn-lg" name="" value="Submit">
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ <div class="footer">
+    <p class="text-center">All Rights Reserved &copy 2019</p>
+  </div>
+
+</body>
+
+</html>
