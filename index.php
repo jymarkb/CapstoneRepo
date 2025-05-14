@@ -9,11 +9,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="bootstrap\dist\css\bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="bootstrap\dist\css\style.css">
-    <script src="bootstrap\dist\js\jquery-3.3.1.min.js"></script>
-    <script src="bootstrap\dist\js\bootstrap.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="bootstrap\dist\css\bootstrap.css"> -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap3/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/bootstrap3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 
     <script>
       $(document).ready(function(){
@@ -205,7 +205,7 @@
             </div>
              <div class="input-group input-group-lg">
               <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-lock"></span></span>
-              <input type="password" id="password" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+              <input type="password" id="password" class="form-control" placeholder="" aria-describedby="sizing-addon1">
             </div>
 
             <div class="col-md-12 col-xs-12 input-group text-center"> 
