@@ -1,0 +1,33 @@
+
+services:
+  database:
+    image: mysql:8.0.36
+    container_name: capstone_repo_db
+    ports:
+      - '3306:3306'
+    environment:
+      - MYSQL_ROOT_PASSWORD=$DATABASE_PASS
+    volumes:
+      - dev_mysql_data:/var/lib/mysql
+
+  php:
+    build:
+      context: .
+    container_name: capstone_repo_php
+    env_file:
+      - ./.env
+    environment:
+      - DATABASE_HOST
+      - DATABASE_PORT
+      - DATABASE_NAME
+      - DATABASE_USER
+      - DATABASE_PASS
+    volumes:
+      - .:/www
+    ports:
+      - 9000:80
+
+volumes:
+  wwww:
+  dev_mysql_data:
+
