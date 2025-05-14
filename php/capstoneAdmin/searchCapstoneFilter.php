@@ -1,5 +1,6 @@
 <?php
 require_once '../connection.php';
+require_once '../generateRandom.php';
 session_start();
 
 $searchItem = $_POST['NewItem'];
@@ -8,8 +9,6 @@ $cat2 = $_POST['cat2'];
 $cat3 = $_POST['cat3'];
 $cat4 = $_POST['cat4'];
 $cat5 = $_POST['cat5'];
-
-
 
 if (!empty($searchItem) and $cat1 > 0 or $cat2 > 0 or $cat3 > 0 or $cat4 > 0 or $cat5 > 0) {//-search with cat
 	$sql = "SELECT * FROM `capstone`,categories,status WHERE cap_title LIKE '%$searchItem%' and (capstone.cat_id=$cat1 or capstone.cat_id=$cat2 or capstone.cat_id=$cat3 or capstone.cat_id=$cat4 or capstone.cat_id=$cat5) and capstone.cat_id = categories.cat_id and capstone.status_id=status.status_id LIMIT 10";
@@ -27,8 +26,8 @@ if (!empty($searchItem) and $cat1 > 0 or $cat2 > 0 or $cat3 > 0 or $cat4 > 0 or 
 	            
 	        </td>
 	        <td class='col-md-2 text-center'>
-	            <h5 class='text-left'><span class='reader'> 123456 </span> <br /><span class='small'>readers</span></h5>
-	            <h5 class='text-left'><span class='reader'> 100% </span> <br /><span class='small'>rating</span></h5>
+	            <h5 class='text-left'><span class='reader'> ".generateRandomView()." </span> <br /><span class='small'>readers</span></h5>
+	            <h5 class='text-left'><span class='reader'> ".generateRandomPercent()." </span> <br /><span class='small'>rating</span></h5>
 	        </td>
 	        <td >
 	            <div class='btn-group btn-table'>
@@ -59,8 +58,8 @@ else if (!empty($searchItem) and $cat1 == 0 and $cat2 == 0 and $cat3 == 0 and $c
 	            
 	        </td>
 	        <td class='col-md-2 text-center'>
-	            <h5 class='text-left'><span class='reader'> 123456 </span> <br /><span class='small'>readers</span></h5>
-	            <h5 class='text-left'><span class='reader'> 100% </span> <br /><span class='small'>rating</span></h5>
+	            <h5 class='text-left'><span class='reader'>".generateRandomView()."</span> <br /><span class='small'>readers</span></h5>
+	            <h5 class='text-left'><span class='reader'>" .generateRandomPercent(). "</span> <br /><span class='small'>rating</span></h5>
 	        </td>
 	        <td >
 	            <div class='btn-group btn-table'>
@@ -91,8 +90,8 @@ else if (empty($searchItem) and $cat1 > 0 or $cat2 > 0 or $cat3 > 0 or $cat4 > 0
 
 	        </td>
 	        <td class='col-md-2 text-center'>
-	            <h5 class='text-left'><span class='reader'> 123456 </span> <br /><span class='small'>readers</span></h5>
-	            <h5 class='text-left'><span class='reader'> 100% </span> <br /><span class='small'>rating</span></h5>
+	            <h5 class='text-left'><span class='reader'> ".generateRandomView()." </span> <br /><span class='small'>readers</span></h5>
+	            <h5 class='text-left'><span class='reader'> ". generateRandomPercent() ." </span> <br /><span class='small'>rating</span></h5>
 	        </td>
 	        <td >
 	            <div class='btn-group btn-table'>
@@ -122,8 +121,8 @@ else if (empty($searchItem) and $cat1 == 0 and $cat2 == 0 and $cat3 == 0 and $ca
 	            <p class='small'>Status: ".$row['status_desc']."</p>
 	        </td>
 	        <td class='col-md-2 text-center'>
-	            <h5 class='text-left'><span class='reader'> 123456 </span> <br /><span class='small'>readers</span></h5>
-	            <h5 class='text-left'><span class='reader'> 100% </span> <br /><span class='small'>rating</span></h5>
+	            <h5 class='text-left'><span class='reader'> ".generateRandomView()." </span> <br /><span class='small'>readers</span></h5>
+	            <h5 class='text-left'><span class='reader'> " .generateRandomPercent(). " </span> <br /><span class='small'>rating</span></h5>
 	        </td>
 	        <td >
 	            <div class='btn-group btn-table'>

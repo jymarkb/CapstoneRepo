@@ -15,7 +15,7 @@ services:
       context: .
     container_name: capstone_repo_php
     env_file:
-      - ./.env
+      - .env
     environment:
       - DATABASE_HOST
       - DATABASE_PORT
